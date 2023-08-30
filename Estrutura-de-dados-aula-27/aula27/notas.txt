@@ -1,0 +1,9 @@
+Melhor convenção a ser usada em structs
+
+typedef struct 'aluno'{             'aluno' -> não é recomendado colocar (boas práticas)
+
+    char nome[50];
+    int idade;
+}Aluno;
+
+Aluno ted;

@@ -1,0 +1,13 @@
+Alocação estática de structs
+
+
+typedef struct _aluno{
+    char nome[100];
+    int idade;
+}Aluno;
+
+Aluno ted;
+strcpy(ted.nome, "Ted");
+ted.idade = 10;
+
+printf("sizeof(Aluno) = %lu bytes\n", sizeof(Aluno));
