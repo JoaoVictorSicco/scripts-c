@@ -1,13 +1,32 @@
-Alocação estática de structs
-
+// ===== Alocação estática de structs ========================================================================
 
 typedef struct _aluno{
     char nome[100];
     int idade;
 }Aluno;
 
-Aluno ted;
+Aluno ted;              // Variável que vai ser usada para manipular os atributos
 strcpy(ted.nome, "Ted");
 ted.idade = 10;
 
 printf("sizeof(Aluno) = %lu bytes\n", sizeof(Aluno));
+
+// Podemos atribuir valores aos campos de ums struct durante sua alocação estática
+// É a mesma coisa que atribuir da maneira feita acima com strcpy e ted.idade
+Aluno ted = {
+    .nome = "Ted",
+    .idade = 10;
+}
+
+
+// ===== Alocação dinâmica de structs =======================================================================
+
+// Podemos alocar instâncias de structs dinamicamente
+Aluno *ted = (Aluno*) calloc(1,sizeof(Aluno));
+
+// Para acessar os campos de uma struct partindo um ponteiro, usamos o ->
+strcpy(ted->nome,"Ted");
+ted->idade = 10;
+
+
+
