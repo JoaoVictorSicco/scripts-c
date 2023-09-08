@@ -1,0 +1,3 @@
+int *v = ponteiro que pode ser alterado
+
+const int *v = ponteiro que não pode ser alterado (somente leitura)
